@@ -1,0 +1,10 @@
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\Repositories.Tests.dll.config
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\Repositories.Tests.dll
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\Repositories.Tests.pdb
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\EntityFramework.dll
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\EntityFramework.xml
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\obj\Debug\Repositories.Tests.csprojResolveAssemblyReference.cache
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\obj\Debug\Repositories.Tests.dll
+C:\Users\raffertyji\Documents\Visual Studio 2013\Projects\McLarenCMS\Repositories.Tests\obj\Debug\Repositories.Tests.pdb

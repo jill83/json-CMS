@@ -1,0 +1,36 @@
+﻿@model JsonCMS.Models.JsonFileListViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Upload New", "Upload")
+    @Html.ActionLink("Download All Active Json Files", "Download")
+</p>
+<form method="GET">
+    <input type="search" name="searchTerm" />
+    <input type="submit" value="Search by File Name" />
+</form>
+
+<p>These are your applications.</p>
+<ul class="list-group">
+    @foreach (var item in Model.JsonFiles)
+    {
+        <div class="row jsonFilelist">
+            <div class="col-md-1">
+                <a class="btn btn-default btn-xs" href="@Url.Action("Edit", new { @id = item.Id })"><span class="glyphicon glyphicon-edit"></span></a>
+                <a class="btn btn-danger btn-xs" href="@Url.Action("Delete", new { @id = item.Id })"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="btn btn-link btn-xs" href="@Url.Action("Download", new { @id = item.Id })"><span class="glyphicon glyphicon-download"></span></a>
+            </div>
+            <div class="col-md-9">@Html.DisplayFor(modelItem => item.FileName)</div>
+            <a class="col-md-9" href="@Url.Action("Details", new { @id = item.Id})">@Html.DisplayFor(modelItem => item.FileName)</a>
+        </div>
+
+        <hr />
+    }
+</ul>
+
+

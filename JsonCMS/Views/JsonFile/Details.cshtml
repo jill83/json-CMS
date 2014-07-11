@@ -1,0 +1,72 @@
+﻿@model JsonCMS.Models.JsonFileViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JsonFile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InUse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<head>
+    @Scripts.Render("~/Content/jsoneditor/jsoneditor.js")
+    <style type="text/css">
+        #jsoneditor {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body onload="setJSON()">
+
+    @Scripts.Render("~/Content/jsoneditor/jsoneditor.min.js")
+    <div id="jsoneditor" style="width: 600px; height: 600px;"></div>
+    <script src="~/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // create the editor
+        var container = document.getElementById("jsoneditor");
+        var options = {
+            mode: 'view',
+            //modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+            error: function (err) {
+                alert(err.toString());
+            }
+        };
+        var editor = new JSONEditor(container, options);
+        var model = @Html.Raw(Json.Encode(Model));
+
+        var str = model.JsonString;
+        window.onload=setJSON();
+        //this function needs to run when page is loaded
+
+
+        // set json
+        function setJSON() {
+            var json = jQuery.parseJSON(model.JsonString);
+            editor.set(json);
+        }
+    </script>
